@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Sample AI Chrome Extension",
-  "version": 1.0,
+  "version": "1.0.0",
   "description": "A sample chrome extension built using AI and ML that allows users to summarize text",
   "permissions": [
     "activeTab",
@@ -10,16 +10,16 @@
     "tabs",
     "webNavigation"
   ],
-  "background": { "service_worker": "service-worker.js" },
+  "background": { "service_worker": "service-worker/service-worker.js" },
   "content_scripts": [
     {
-      "js": ["content-script.js"],
+      "js": ["content-script/content-script.js"],
       "matches": ["<all_urls>"],
       "run_at": "document_end"
     }
   ],
   "action": {
-    "default_popup": "js/index.html",
+    "default_popup": "index.html",
     "default_title": "Sample AI Chrome Extension"
   }
 }
