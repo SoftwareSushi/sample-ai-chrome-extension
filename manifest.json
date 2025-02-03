@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "A sample chrome extension built using AI and ML that allows users to summarize text",
   "permissions": [
+    "storage",
     "activeTab",
     "background",
     "contextMenus",
