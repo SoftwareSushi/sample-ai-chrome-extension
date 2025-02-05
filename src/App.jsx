@@ -1,32 +1,24 @@
-import "./App.css";
 import { useState } from "react";
-import { summarizeText } from "./api";
+
+import Home from "./views/Home";
+import RegisterFlow from "./pages/RegisterFlow";
+import ResultFlow from "./pages/ResultFlow";
+
+import "./App.css";
 
 function App() {
-  const [summary, setSummary] = useState("");
+  const [step, setStep] = useState('start');
+
+  const handleStepChange = (newStep) => {
+    setStep(newStep);
+  };
 
   return (
-    <>
-      <div className="app">
-        <header className="app__content">AI Summary Extension</header>
-        <button
-          className="app__button"
-          onClick={() => {
-            chrome.runtime.sendMessage(
-              { type: "GET_PAGE_TEXT" },
-              (response) => {
-                summarizeText(response.content).then((summary) => {
-                  setSummary(summary);
-                });
-              }
-            );
-          }}
-        >
-          Summarize Text!
-        </button>
-        <p className="app__summary">{summary === "" ? <></> : summary}</p>
-      </div>
-    </>
+    <div className="app">
+      {step === 'start' && <Home changeStep={handleStepChange} />}
+      {step === 'register' && <RegisterFlow changeStep={handleStepChange} />}
+      {step === 'result' && <ResultFlow changeStep={handleStepChange} />}
+    </div>
   );
 }
 
