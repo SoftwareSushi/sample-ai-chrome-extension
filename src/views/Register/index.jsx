@@ -51,7 +51,7 @@ function Register({onSubmit}) {
             name="email"
           />
           <Input
-            type="tel"  // Changed to tel for phone numbers
+            type="tel"
             name="phoneNumber"
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}

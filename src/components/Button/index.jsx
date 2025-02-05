@@ -1,5 +1,3 @@
-// Create a simple button component that can be passed the text, click handler, and type
-
 import PropTypes from 'prop-types';
 
 import "./button.css";
