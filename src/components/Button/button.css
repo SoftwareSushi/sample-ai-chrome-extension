@@ -1,0 +1,45 @@
+.button {
+  border-radius: 12px;
+  width: 95%;
+  margin: 10px auto;
+  color: white;
+  padding: 15px 20px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.primary {
+  background-color: rgb(var(--primary-color));
+  
+  &:hover {
+    background-color: rgba(var(--primary-color), 0.9);
+  }
+}
+
+.secondary {
+  background-color: rgb(var(--secondary-color));
+
+  &:hover {
+    background-color: rgba(var(--secondary-color), 0.9);
+  }
+}
+
+.accent {
+  background-color: rgb(var(--accent-color));
+
+  &:hover {
+    background-color: rgba(var(--accent-color), 0.9);
+  }
+}
+
+/* Add these new utility classes */
+.mt-auto {
+  margin-top: auto;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+

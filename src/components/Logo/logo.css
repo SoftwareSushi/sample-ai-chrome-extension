@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.header p {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.header img {
+  width: 60px;
+  height: 60px;
+}

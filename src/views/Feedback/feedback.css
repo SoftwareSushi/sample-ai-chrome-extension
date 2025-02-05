@@ -1,0 +1,49 @@
+.feedback-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback-container img {
+  width: 130px;
+  height: 130px;
+}
+
+.feedback-container h3 {
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35.2px;
+  margin: 10px 0px;
+}
+
+.feedback-container p {
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35.2px;
+  margin: 0px;
+}
+
+.spinner {
+  width: 75px;
+  height: 75px;
+  border: 5px solid #03B3FF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
