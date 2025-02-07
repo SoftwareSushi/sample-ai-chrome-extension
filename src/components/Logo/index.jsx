@@ -5,7 +5,7 @@ const Logo = () => {
   return (
     <div className="header">
       <img src={logo} alt="logo" />
-      <p>Sumarize</p>
+      <p>Summarize</p>
     </div>
   );
 };

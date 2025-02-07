@@ -1,18 +1,18 @@
-import { Readability } from "@mozilla/readability";
+document.addEventListener("mouseup", () => {
+  const selectedText = window.getSelection().toString().trim();
 
-console.log("Content Script loaded");
-
-const workingDocument = document.cloneNode(true);
-const pageText = new Readability(workingDocument)
-  .parse()
-  .textContent.substring(0, 2500);
-
-chrome.runtime.sendMessage(
-  { type: "PAGE_TEXT", payload: pageText },
-  (response) => {
-    console.log(
-      "Content script received response from Service worker",
-      response
+  if (selectedText.length > 0) {
+    chrome.runtime.sendMessage(
+      {
+        type: "SELECTED_TEXT",
+        payload: selectedText,
+      },
+      (response) => {
+        console.log(
+          "Content Script received response from service worker",
+          response
+        );
+      }
     );
   }
-);
+});

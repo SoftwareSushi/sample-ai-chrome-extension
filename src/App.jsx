@@ -7,7 +7,7 @@ import ResultFlow from "./pages/ResultFlow";
 import "./App.css";
 
 function App() {
-  const [step, setStep] = useState('start');
+  const [step, setStep] = useState("start");
 
   const handleStepChange = (newStep) => {
     setStep(newStep);
@@ -15,9 +15,9 @@ function App() {
 
   return (
     <div className="app">
-      {step === 'start' && <Home changeStep={handleStepChange} />}
-      {step === 'register' && <RegisterFlow changeStep={handleStepChange} />}
-      {step === 'result' && <ResultFlow changeStep={handleStepChange} />}
+      {step === "start" && <Home changeStep={handleStepChange} />}
+      {step === "register" && <RegisterFlow changeStep={handleStepChange} />}
+      {step === "result" && <ResultFlow changeStep={handleStepChange} />}
     </div>
   );
 }
